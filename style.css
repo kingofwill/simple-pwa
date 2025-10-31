@@ -1,70 +1,112 @@
+/* 1. Cài đặt chung */
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #f4f4f4; /* Nền xám nhạt cho nội dung */
+    color: #333;
 }
 
+/* 2. Sửa lỗi Header tràn Status Bar */
 .header {
-  width: 100%;
-  height: 34.5vh;
-  position: relative;
-  background: linear-gradient(180deg, #2bcdd2, #fff);
-  top: 0;
-  left: 0;
+    width: 100%;
+    height: 34.5vh; /* Giữ nguyên chiều cao của bạn */
+    position: relative;
+    background: linear-gradient(180deg, #2bcdd2, #fff);
+    top: 0;
+    left: 0;
+
+    /* === THÊM 2 DÒNG NÀY ĐỂ SỬA LỖI === */
+    box-sizing: border-box; /* Đảm bảo padding không làm vỡ layout */
+    padding-top: env(safe-area-inset-top); 
+    /* * env(safe-area-inset-top) là một biến CSS
+     * tự động lấy chiều cao của tai thỏ/status bar
+     */
 }
 
+/* 3. Giữ nguyên code của bạn cho các phần tử con */
+/* (Các `top: ...vh` của bạn vẫn đúng 
+   vì giờ nó sẽ tính từ sau cái padding-top) */
 .back-arrow {
-  position: absolute;
-  outline-offset: -0.50px;
-  top: 1.75vh;
-  left: 5vw;
-  font-size: 1.5rem;
-  color: #fff;
+    position: absolute;
+    outline-offset: -0.50px;
+    top: 1.75vh;
+    left: 5vw;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer; 
 }
 
 .delivery-text {
-  position: absolute;
-  top: 0.625vh;
-  left: 12.78vw;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #fff;
+    position: absolute;
+    top: 0.625vh;
+    left: 12.78vw;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
 }
 
 .university-text {
-  position: absolute;
-  font-size: 1.4rem;
-  color: #fff;
-  top: 2.375vh;
-  left: 12.78vw;
-  font-weight: 700;
+    position: absolute;
+    font-size: 1.4rem;
+    color: #fff;
+    top: 2.375vh;
+    left: 12.78vw;
+    font-weight: 700;
 }
 
 .cart-icon {
-  position: absolute;
-  top: 12px;
-  right: 18px;
-  font-size: 1.5rem;
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    font-size: 1.5rem;
+    color: #fff; /* Thêm màu trắng cho icon */
+    cursor: pointer;
 }
 
 .search-bar {
-  width: 91.67vw;
-  height: 5.125vh;
-  position: absolute;
-  border-radius: 2rem;
-  background-color: #fff;
-  top: 5.875vh;
-  left: 50%;
-  transform: translateX(-50%);
+    width: 91.67vw;
+    height: 5.125vh;
+    position: absolute;
+    border-radius: 2rem;
+    background-color: #fff;
+    top: 5.875vh; 
+    left: 50%;
+    transform: translateX(-50%);
+    
+    /* Thêm code để căn giữa text placeholder */
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    box-sizing: border-box;
+    color: #888;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
+.search-bar span {
+    /* Căn icon và text */
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+}
+
+/* 4. Navbar (nằm ngay dưới header) */
 .navbar {
-  /* Styles for navbar */
-  padding: 1rem;
-  text-align: center;
+    background-color: #fff; /* Nền trắng cho navbar */
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border-bottom: 1px solid #eee;
 }
 
 .navbar a {
-  margin: 0 1rem;
-  text-decoration: none;
-  color: #333;
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
+
+/* 5. Vùng nội dung chính */
+.content {
+    padding: 1rem;
 }

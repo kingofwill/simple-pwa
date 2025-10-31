@@ -1,28 +1,45 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simple PWA</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="manifest" href="manifest.json">
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    
+    <title>Giao hàng PWA</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    
+    <meta name="theme-color" content="#2bcdd2"> 
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 </head>
 <body>
-  <div class="container">
+
     <div class="header">
-      <div class="back-arrow">&larr;</div>
-      <div class="delivery-text">Giao đến</div>
-      <div class="university-text">Trường Đại Học FPT Đà Nẵng</div>
-      <div class="cart-icon">&#128722;</div>
-      <div class="search-bar"></div>
+        <div class="back-arrow">&larr;</div>
+        <div class="delivery-text">Giao đến</div>
+        <div class="university-text">Trường Đại Học FPT Đà Nẵng</div>
+        <div class="cart-icon">&#128722;</div>
+        
+        <div class="search-bar">
+            <span>&#128269; Tìm kiếm món ăn, cửa hàng...</span>
+        </div>
     </div>
+
     <div class="navbar">
-      <!-- Placeholder for navbar -->
-      <a href="#">Home</a>
-      <a href="#">Discover</a>
-      <a href="#">Cart</a>
+        <a href="#">Home</a>
+        <a href="#">Discover</a>
+        <a href="#">Cart</a>
     </div>
-  </div>
-  <script src="service-worker.js"></script>
+
+    <main class="content">
+        <h2>Các cửa hàng gần bạn</h2>
+        <p>Nội dung chính của trang web sẽ nằm ở đây...</p>
+        <p>Nó sẽ tự động nằm bên dưới header và navbar một cách chính xác.</p>
+    </main>
+
+    <script src="app.js"></script>
+
 </body>
 </html>

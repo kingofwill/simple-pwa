@@ -1,0 +1,15 @@
+{
+    "short_name": "Ghi chú",
+    "name": "Ghi chú Offline PWA",
+    "icons": [
+        {
+            "src": "icon-512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#3498db"
+}

@@ -2,44 +2,41 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    
-    <title>Giao hàng PWA</title>
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple PWA</title>
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
-    
-    <meta name="theme-color" content="#2bcdd2"> 
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 </head>
 <body>
-
     <div class="header">
-        <div class="back-arrow">&larr;</div>
         <div class="delivery-text">Giao đến</div>
         <div class="university-text">Trường Đại Học FPT Đà Nẵng</div>
         <div class="cart-icon">&#128722;</div>
-        
-        <div class="search-bar">
-            <span>&#128269; Tìm kiếm món ăn, cửa hàng...</span>
+        <input type="text" placeholder="Bạn đang thèm gì nào?" class="search-input">
+    </div>
+    <div class="categories">
+        <div class="category">
+            <img src="https://kissanrestaurant.com/wp-content/uploads/2024/04/burgers.jpeg" alt="Đồ Ăn Nhanh">
+            <div>Đồ Ăn Nhanh</div>
+        </div>
+        <div class="category">
+            <img src="https://media.loveitopcdn.com/24813/thumb/com-tron-kimchi-hancook.jpg" alt="Cơm - Xôi">
+            <div>Cơm - Xôi</div>
+        </div>
+        <div class="category">
+            <img src="https://annamrestaurant.co.uk/wp-content/uploads/2024/11/3796d7_e97173ffd4d34268a68404e492b4255bmv2.webp" alt="Bún - Phở - Mỳ">
+            <div>Bún - Phở - Mỳ</div>
+        </div>
+        <div class="category">
+            <img src="https://gongcha.com.vn/wp-content/uploads/2018/06/Hinh-Web-OKINAWA-LATTE.png" alt="Trà Sữa - Cà Phê">
+            <div>Trà Sữa - Cà Phê</div>
         </div>
     </div>
-
     <div class="navbar">
         <a href="#">Home</a>
         <a href="#">Discover</a>
         <a href="#">Cart</a>
     </div>
-
-    <main class="content">
-        <h2>Các cửa hàng gần bạn</h2>
-        <p>Nội dung chính của trang web sẽ nằm ở đây...</p>
-        <p>Nó sẽ tự động nằm bên dưới header và navbar một cách chính xác.</p>
-    </main>
-
-    <script src="app.js"></script>
-
+    <script src="service-worker.js"></script>
 </body>
 </html>
